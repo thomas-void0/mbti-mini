@@ -1,0 +1,153 @@
+.container-index {
+  min-height: calc(100vh - 80px);
+  background-color: #f5f7fa;
+  padding: 20px;
+
+  .content {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
+
+    .card {
+      background-color: white;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+
+      .progress {
+        margin-bottom: 1.5rem;
+
+        .progress-text {
+          font-size: 14px;
+          color: #6b7280;
+          margin-bottom: 8px;
+        }
+
+        .progress-bar {
+          width: 100%;
+          height: 8px; // 增加进度条高度
+          background-color: #e5e7eb;
+          border-radius: 9999px;
+          overflow: hidden;
+
+          .progress-fill {
+            height: 100%;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+          }
+        }
+      }
+
+      .question-text {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #1f2937;
+        margin-bottom: 1.5rem;
+        display: block;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      .choices {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+
+        .choice-button {
+          width: 100%;
+          min-height: 48px;
+          padding: 12px 16px;
+          border: 1px solid #e5e7eb;
+          border-radius: 8px;
+          background-color: white;
+          transition: all 0.2s;
+          display: flex;
+          align-items: flex-start;
+
+          &.selected {
+            background-color: #eff6ff;
+            border-color: #3b82f6;
+          }
+
+          .choice-text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #374151;
+            text-align: left;
+            white-space: pre-wrap;
+            word-break: break-word;
+          }
+        }
+      }
+
+      .navigation {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .nav-button {
+          flex: 1;
+          height: 40px;
+          border-radius: 8px;
+          font-size: 14px;
+
+          &.prev {
+            background-color: white;
+            border: 1px solid #3b82f6;
+            color: #3b82f6;
+
+            &:disabled {
+              border-color: #e5e7eb;
+              color: #9ca3af;
+            }
+          }
+
+          &.next {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+
+            &.disabled {
+              background-color: #e5e7eb;
+              color: #9ca3af;
+              cursor: not-allowed;
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      &.result {
+        text-align: center;
+        padding: 2rem;
+
+        .title {
+          font-size: 18px;
+          font-weight: bold;
+          color: #3b82f6;
+          margin-bottom: 1rem;
+          line-height: 1.4;
+        }
+
+        .description {
+          font-size: 14px;
+          line-height: 1.6;
+          color: #4b5563;
+          margin-bottom: 2rem;
+          white-space: pre-wrap;
+          word-break: break-word;
+        }
+
+        .restart-button {
+          width: 75%;
+          height: 40px;
+          background-color: #3b82f6;
+          color: white;
+          border-radius: 8px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

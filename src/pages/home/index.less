@@ -1,0 +1,105 @@
+.container-home {
+  min-height: calc(100vh - 80px);
+  background-color: #f5f7fa;
+
+  .content {
+    max-width: 28rem;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    .header {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+
+      .header-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+
+    .introduction {
+      padding: 24px;
+
+      .section {
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .section-title {
+          display: block;
+          font-size: 18px;
+          font-weight: bold;
+          color: #3b82f6;
+          margin-bottom: 12px;
+        }
+
+        .section-text {
+          display: block;
+          font-size: 14px;
+          line-height: 1.6;
+          color: #4b5563;
+          margin-bottom: 8px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .btn-box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .start-button {
+      width: 45%;
+      height: 44px;
+      background-color: #3b82f6;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.2s;
+
+      &:active {
+        background-color: #2563eb;
+      }
+    }
+
+    .record-button {
+      width: 45%;
+      height: 44px;
+      color: black;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.2s;
+
+      &:active {
+        background-color: #2563eb;
+      }
+    }
+  }
+}

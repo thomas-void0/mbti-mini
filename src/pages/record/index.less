@@ -1,0 +1,62 @@
+.record-page {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 16px;
+}
+
+.record-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.record-item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .record-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .record-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1f2937;
+  }
+
+  .record-type {
+    font-size: 16px;
+    color: #3b82f6;
+    font-weight: bold;
+  }
+
+  .record-time {
+    font-size: 14px;
+    color: #6b7280;
+  }
+}
+
+.empty-state {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+
+  .empty-text {
+    color: #6b7280;
+    font-size: 16px;
+  }
+}
