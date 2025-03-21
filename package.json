@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
+  "author": "thomas-void0",
+  "license": "MIT",
   "templateInfo": {
     "name": "react-NutUI",
     "typescript": true,
@@ -34,7 +36,6 @@
     "Android >= 4.1",
     "ios >= 8"
   ],
-  "author": "yangjingyu",
   "dependencies": {
     "@babel/runtime": "^7.21.5",
     "@nutui/icons-react-taro": "^2.0.1",
