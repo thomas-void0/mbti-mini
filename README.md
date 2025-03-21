@@ -11,3 +11,19 @@
   <img src="./example/record.jpeg" width="200" alt="记录页" />
 </div>
 
+## 使用
+
+1. clone本项目
+
+2. 安装依赖
+
+```shell
+pnpm install
+```
+3. 启动项目
+
+```shell
+pnpm dev:weapp
+```
+
+4. 下载微信开发者工具，导入此项目
