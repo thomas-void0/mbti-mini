@@ -6,7 +6,7 @@ export default defineAppConfig({
     navigationBarTitleText: "WeChat",
     navigationBarTextStyle: "black",
   },
-  usingComponents: {
-    "ec-canvas": "./components/ec-canvas/ec-canvas",
-  },
+  // usingComponents: {
+  //   "ec-canvas": "./components/ec-canvas/ec-canvas",
+  // },
 });

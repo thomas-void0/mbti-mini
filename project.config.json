@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "dist/",
   "projectname": "mini-mbti",
-  "description": "",
+  "description": "mbti职业性格测试小程序",
   "appid": "wx542f316a574b33bc",
   "setting": {
     "urlCheck": true,
@@ -21,7 +21,8 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "packNpmRelationList": []
   },
   "compileType": "miniprogram",
   "simulatorType": "wechat",
