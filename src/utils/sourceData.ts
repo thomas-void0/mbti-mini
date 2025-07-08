@@ -30,7 +30,25 @@ export type MBTIResultData = {
   };
 };
 
-export const mbtiResultMap: Record<string, MBTIResultData> = {
+export type MBTIType =
+  | "ENTJ"
+  | "INTJ"
+  | "ENTP"
+  | "INTP"
+  | "ENFJ"
+  | "INFJ"
+  | "ENFP"
+  | "INFP"
+  | "ESTJ"
+  | "ISTJ"
+  | "ESFJ"
+  | "ISFJ"
+  | "ESTP"
+  | "ISTP"
+  | "ESFP"
+  | "ISFP";
+
+export const mbtiResultMap: Record<MBTIType, MBTIResultData> = {
   ENTJ,
   INTJ,
   ENTP,

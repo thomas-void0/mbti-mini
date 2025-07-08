@@ -1,11 +1,12 @@
 import { View, Text } from "@tarojs/components";
 import { Button, ConfigProvider } from "@nutui/nutui-react-taro";
 import zhCN from "@nutui/nutui-react-taro/dist/locales/zh-CN";
-import { navigateTo, setStorageSync } from "@tarojs/taro";
+import { getStorageSync, navigateTo, setStorageSync } from "@tarojs/taro";
 import { useState } from "react";
 import mbtiQuestions from "src/assets/data/mbti.json";
 import "./index.less";
 import clsx from "clsx";
+import genRecordItem from "src/utils/genRecordItem";
 
 type MBTIQuestion = {
   question: string;
@@ -59,7 +60,6 @@ function Test() {
     }, 300);
   };
 
-
   // 上一题
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
@@ -99,7 +99,11 @@ function Test() {
     ].join("");
 
     // 将结果存储到本地
-    setStorageSync("mbtiResult", result);
+    const record = genRecordItem(result);
+    setStorageSync("currentShowTestRecord", record);
+    // 存储记录到本地
+    const testRecords = getStorageSync("testRecords") || [];
+    setStorageSync("testRecords", [record, ...testRecords]);
 
     // 计算完结果后跳转到结果页面
     navigateTo({

@@ -1,16 +1,11 @@
 import { View, Text } from "@tarojs/components";
-import { Button, ConfigProvider } from "@nutui/nutui-react-taro";
+import { ConfigProvider } from "@nutui/nutui-react-taro";
 import zhCN from "@nutui/nutui-react-taro/dist/locales/zh-CN";
 import { useEffect, useState } from "react";
 import { getStorageSync, setStorageSync, navigateTo } from "@tarojs/taro";
 import dayjs from "dayjs";
 import "./index.less";
-
-type TestRecord = {
-  title: string;
-  mbtiResult: string;
-  time: string;
-};
+import { TestRecord } from "src/utils/genRecordItem";
 
 function Record() {
   const [records, setRecords] = useState<TestRecord[]>([]);
@@ -23,7 +18,7 @@ function Record() {
 
   const handleRecordClick = (record: TestRecord) => {
     // 设置选中的MBTI结果
-    setStorageSync("mbtiResult", record.mbtiResult);
+    setStorageSync("currentShowTestRecord", record);
     // 跳转到结果页面
     navigateTo({
       url: "/pages/result/index",
@@ -50,7 +45,7 @@ function Record() {
             >
               <View className="record-main">
                 <Text className="record-title">{record.title}</Text>
-                <Text className="record-type">{record.mbtiResult}</Text>
+                <Text className="record-type">{record.mbtiType}</Text>
               </View>
               <Text className="record-time">
                 {dayjs(record.time).format("YYYY-MM-DD HH:mm")}
